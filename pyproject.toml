@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "lawdify"
+version = "1.0.0"
+description = "Lawdify take home project"
+authors = ["peteygao <me@petergao.com>"]
+readme = "README.md"
+package-mode = false
+
+
+[tool.poetry.dependencies]
+python = "3.12.3"
+langchain = "^0.2.0"
+langchain-openai = "^0.1.7"
+pypdf = "^4.2.0"
+langchain-community = "^0.2.0"
+sentence-transformers = "^2.7.0"
+einops = "^0.8.0"
+fastapi = "^0.111.0"
+chromadb = "^0.5.0"
+langchain-chroma = "^0.1.1"
+python-dotenv = "^1.0.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
