@@ -12,15 +12,22 @@ $ asdf install
 
 ```bash
 $ curl -sSL https://install.python-poetry.org | python3 -
+$ poetry install
+$ cd frontend
+$ npm i
 ```
-
-- Install Python dependencies with `poetry install`
-- Install Nodejs dependencies with `cd frontend && npm i`
-- **Obtain OpenAPI API Key, Base URL, Model Name and add them to `.env`**
 
 ## Running the application
 
-1. First, index the documents under `./documents` via `poetry run python index_documents.py`
-2. Launch the FastAPI server: `poetry run fastapi dev lawdify.py` (first launch will take longer due to having to download nomic-text-embed v1.5 from HuggingFace)
-3. Launch the frontend: `cd frontend && npm start`
+⚠️* *Obtain OpenAPI API Key, Base URL, Model Name and add them to `.env`**
+
+1. Index the documents under `./documents` via `poetry run python index_documents.py`
+2. Run the FastAPI server: `poetry run fastapi dev lawdify.py`
+3. Run the frontend: `cd frontend && npm start`
 4. Go to `http://localhost:3000` to interact with the Lawdify RAG Demo
+
+## Development
+
+`lawdify.py` is the core FastAPI server with the LLM interface at `/ask` endpoint. `index_documents.py` is for indexing files under `./documents` into the vector database (ChromaDB).
+
+`frontend/` is the folder with a React front-end for interacting with the LLM via a chatbot-like UI. See that folder's README for more info.
