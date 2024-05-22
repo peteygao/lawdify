@@ -22,7 +22,7 @@ embedding = HuggingFaceEmbeddings(
     model_kwargs={"trust_remote_code": True},
 )
 
-chromadb_path = "./chomadb"
+chromadb_path = "./chromadb"
 
 # Delete any existing indexed documents before re-indexing
 # Make sure the path exists and it's a directory
